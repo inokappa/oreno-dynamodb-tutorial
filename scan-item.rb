@@ -2,4 +2,4 @@
 
 require './lib/dynamodb'
 
-scan_item('soramame', 'town_name', '福岡')
+scan_item('soramame', 'town_name', '福岡', 3)

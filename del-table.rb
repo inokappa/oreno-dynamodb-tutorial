@@ -3,4 +3,10 @@
 require './lib/dynamodb'
 
 # 
-p delete_table('soramame')
+begin 
+  resp = delete_table('soramame')
+rescue
+  print "Error: #$!\n"
+else
+  puts "Table " + resp.table_description.table_name + " deleted."
+end

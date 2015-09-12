@@ -57,13 +57,14 @@ def delete_table(table_name)
   })
 end
 
-def scan_item(table_name, filter_attribute, value)
+def scan_item(table_name, filter_attribute, attribute_value, limit_num=1)
   result = $client.scan(
     table_name: table_name,
     select: "ALL_ATTRIBUTES", 
+    # limit: 1,
     scan_filter: {
       "#{filter_attribute}" => {
-        attribute_value_list: ["#{value}"], 
+        attribute_value_list: ["#{attribute_value}"], 
         comparison_operator: "CONTAINS",
       },
     },
