@@ -73,7 +73,7 @@ Table soramame created.
 - データの検索
 
 ```sh
-./scan-item.rb
+% ./scan-item.rb
 
 ...
 
